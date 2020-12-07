@@ -1,1 +1,1 @@
-# infa_2020_lavrentev
+# C01-019_Lavrentev_python
