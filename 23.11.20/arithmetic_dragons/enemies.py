@@ -107,7 +107,7 @@ class Easy(Troll):
 class Ridiculing(Troll):
 	def __init__(self):
 		self._health = 50
-		self._attack = 75
+		self._attack = 1000
 		self._color = 'Скоморох'
 
 	def __decr(self, x):
@@ -118,8 +118,8 @@ class Ridiculing(Troll):
 		return ",".join(result)
 
 	def question(self):
-		x = randint(1, 20)
-		self.__quest = 'А мне на множетели разложи, и отсортируй!!!' + str(x) + 'типо так: 5,3,2,kek'
+		x = randint(1000, 5000)
+		self.__quest = 'А мне на множетели разложи, и отсортируй!!!' + str(x) + 'типо так: 7,3,2,kek(42)'
 		self.set_answer(self.__decr(x))
 		return self.__quest
 
