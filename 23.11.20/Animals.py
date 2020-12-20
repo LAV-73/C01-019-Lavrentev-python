@@ -10,24 +10,23 @@ class Animal():
 	def __str__(self):
 		return self.get_str()
 
-class Tiger(Animal):
-	__type = 'Tiger'
+class Zebra(Animal):
+	__type = 'Zebra'
 	def get_str(self):
 		return ('Type of animal: ' + self.__type + '; Name: ' + self.gName() + '; Age: ' + self.gAge())
 
-class Unicorn(Animal):
-	__type = 'Unicorn'
+class Dolphin(Animal):
+	__type = 'Dolphin'
 	def get_str(self):
 		return ('Type of animal: ' + self.__type + '; Name: ' + self.gName() + '; Age: ' + self.gAge())
 
 if __name__ == "__main__" :
-	print("Enter Name and Age of Tiger:")
-	tiger1 = Tiger(input())
-	print("Enter Name and Age of Unicorn:")	
-	unicorn1 = Unicorn(input())
+	print("Enter Name and Age of Zebra:")
+	zebr = Tiger(input())
+	print("Enter Name and Age of Dolphin:")	
+	dolph = Dolphin(input())
 
-	print(tiger1)
-	print(unicorn1)
-
+	print(zebr)
+	print(dolph)
 
 
