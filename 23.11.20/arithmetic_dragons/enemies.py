@@ -38,6 +38,32 @@ class GreenDragon(Dragon):
         self.__quest = str(x) + '+' + str(y)
         self.set_answer(x + y)
         return self.__quest
+    
+class RedDragon(Dragon):
+    def __init__(self):
+        self._health = 200
+        self._attack = 10
+        self._color = 'красный'
+    
+    def question(self):
+        x = randint(1, 100)
+        y = randint(1, 100)
+        self.__quest = str(x) + '-' + str(y)
+        self.set_answer(x - y)
+        return self.__quest
+    
+class BlackDragon(Dragon):
+    def __init__(self):
+        self._health = 50
+        self._attack = 50
+        self._color = 'чёрный'
+    
+    def question(self):
+        x = randint(50, 100)
+        y = randint(50, 100)
+        self.__quest = str(x) + '*' + str(y)
+        self.set_answer(x * y)
+        return self.__quest
 
 #FIXME здесь также должны быть описаны классы RedDragon и BlackDragon
 # красный дракон учит вычитанию, а чёрный -- умножению.
