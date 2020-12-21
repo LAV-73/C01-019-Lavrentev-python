@@ -73,55 +73,55 @@ class BlackDragon(Dragon):
         return self.__quest
     
 class Сunning(Troll):
-	def __init__(self):
-		self._health = 50
-		self._attack = 75
-		self._color = 'хитрый'
+    def __init__(self):
+        self._health = 50
+        self._attack = 75
+        self._color = 'хитрый'
 
-	def question(self):
-		x = randint(1, 5)
-		self.__quest = 'Спорим не угадаешь!(4)'
-		self.set_answer(x)
-		return self.__quest
+    def question(self):
+        x = randint(1, 5)
+        self.__quest = 'Спорим не угадаешь!(4)'
+        self.set_answer(x)
+        return self.__quest
 
 class Easy(Troll):
     def __Prime(self, x):
-		i = 2
-		while i * i <= x:
-			if x % i == 0:
-				return "Нет"
-			i += 1
-		return "Да"
+        i = 2
+        while i * i <= x:
+            if x % i == 0:
+                return 0
+            i += 1
+        return 1
     
-	def __init__(self):
-		self._health = 50
-		self._attack = 75
-		self._color = 'Хацкер'
+    def __init__(self):
+        self._health = 50
+        self._attack = 75
+        self._color = 'Хацкер'
 
-	def question(self):
-		x = randint(11231, 1010203)
-		self.__quest = 'Это число ' + str(x) + ' простое? Мне для взлома нужно...(да: Да нет: Нет)'
-		self.set_answer(self.__Prime(x))
-		return self.__quest
+    def question(self):
+        x = randint(11231, 1010203)
+        self.__quest = 'Это число ' + str(x) + ' простое? Мне для взлома нужно...(да: 1 нет: 0)'
+        self.set_answer(self.__Prime(x))
+        return self.__quest
 
 class Ridiculing(Troll):
-	def __init__(self):
-		self._health = 50
-		self._attack = 1000
-		self._color = 'Скоморох'
+    def __init__(self):
+        self._health = 50
+        self._attack = 1000
+        self._color = 'Скоморох'
 
-	def __decr(self, x):
-		result = []
-		for i in range(1, x+1):
-			if x % i == 0:
-				result.insert(str(i))
-		return ",".join(result)
+    def __decr(self, x):
+        result = []
+        for i in range(1, x+1):
+            if x % i == 0:
+                result.insert(str[i])
+        return ",".join(result)
 
-	def question(self):
-		x = randint(1000, 5000)
-		self.__quest = 'А мне на множетели разложи, и отсортируй!!!' + str(x) + 'типо так: 7,3,2,kek(42)'
-		self.set_answer(self.__decr(x))
-		return self.__quest
+    def question(self):
+        x = randint(1000, 5000)
+        self.__quest = 'А мне на множетели разложи, и отсортируй!!!' + str(x) + 'типо так: 7,3,2,kek(42)'
+        self.set_answer(self.__decr(x))
+        return self.__quest
 
 #FIXME здесь также должны быть описаны классы RedDragon и BlackDragon
 # красный дракон учит вычитанию, а чёрный -- умножению.
